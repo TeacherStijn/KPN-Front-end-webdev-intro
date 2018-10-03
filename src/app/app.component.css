@@ -1,0 +1,54 @@
+h1 {
+  font-family: "Agency FB";
+  font-size: 40pt;
+}
+
+#pcCheck {
+  width: 80%;
+  height: 250px;
+  background-color: indigo;
+  border-radius: 8%;
+  padding: 1.5em;
+  color: white;
+  text-align: center;
+}
+
+.resultContainer {
+  height: 75vh;
+  width: 200px;
+  float: left;
+  margin-left: 1em;
+
+  background-image: linear-gradient(lightblue, white);
+  border: 10px solid teal;;
+  border-radius: 10%;
+  color: white;
+  text-align: center;
+}
+
+.blokkop {
+  font-size: 16pt;
+  background-color: indigo;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  color: white;
+  text-align: center;
+  height: 2.5em;
+}
+
+#selected {
+  color: black;
+  font-size: 10pt;
+}
+
+#selected input {
+  width: 40px;
+}
+
+#txtPc {
+  width: 80px;
+}
+
+#txtNr {
+  width: 40px;
+}

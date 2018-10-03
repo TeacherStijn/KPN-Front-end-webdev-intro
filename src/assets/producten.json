@@ -1,0 +1,75 @@
+[
+  {
+    "naam": "Internet",
+    "pakketten": [
+      {
+        "soort": "ADSL Internet",
+        "features": {
+          "snelheid": 30
+        }
+      }
+    ]
+  },
+
+  {
+    "naam": "Internet en TV",
+    "pakketten": [
+      {
+        "soort": "ADSL Internet",
+        "features": {
+          "snelheid": 10
+        }
+      },
+      {
+        "soort": "Digitenne",
+        "features": {
+          "zenders": 3
+        }
+      }
+    ]
+  },
+
+  {
+    "naam": "Internet, TV en Bellen",
+    "pakketten": [
+      {
+        "soort": "Glasvezel Internet",
+        "features": {
+          "snelheid": 50
+        }
+      },
+      {
+        "soort": "IPTV",
+        "features": {
+          "zenders": 20
+        }
+      },
+      {
+        "soort": "Telefonie",
+        "features": {
+          "minuten": 200,
+          "06-nummers": true
+        }
+      }
+    ]
+  },
+
+  {
+    "naam": "Eindbaas pakket Loco",
+    "pakketten": [
+      {
+        "soort": "Glasvezel Internet",
+        "features": {
+          "snelheid": 500
+        }
+      },
+      {
+        "soort": "IPTV",
+        "features": {
+          "zenders": 20,
+          "extra zenders": 200
+        }
+      }
+    ]
+  }
+]

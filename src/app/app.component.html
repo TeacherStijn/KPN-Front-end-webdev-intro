@@ -1,0 +1,64 @@
+<h1>Welkom bij de productpagina!</h1>
+<br/>
+<div id="pcCheck">
+  <h2>Postcode check:</h2>
+  <label>
+    Postcode:
+    <input id="txtPc" type="text" pattern="^[1-9][0-9]{3}\s{0,1}[a-zA-Z]{2}$"/>
+  </label>
+  <br/>
+
+  <label>
+    Huisnummer:
+    <input id="txtNr" type="text"/>
+  </label>
+
+  <br/><br/>
+
+  <button class="btn btn-warning">Check!</button>
+</div>
+<br/>
+
+<div class="resultContainer" *ngFor="let product of this.producten$ | async">
+  <h2 class="blokkop">{{ product.naam }}</h2>
+  <div class="pakketten" *ngFor="let pakket of product.pakketten">
+    {{ pakket.soort }}
+  </div>
+  <br/>
+  <button class="btn btn-info" (click)="selected=product">Meer...</button>
+  <br/>
+  <hr/>
+
+  <div *ngIf="product==selected" id="selected">
+    <div *ngFor="let pakket of selected.pakketten">
+      <strong>{{ pakket.soort }}</strong>
+      <div>
+        <!-- TODO: loggen pakket features -->
+        <label *ngIf="pakket.features['snelheid']">
+          Snelheid:
+          <input type="text" [(ngModel)]="pakket.features['snelheid']">
+        </label>
+
+        <label *ngIf="pakket.features['zenders']">
+          Zenders:
+          <input type="text" [(ngModel)]="pakket.features['zenders']">
+        </label>
+
+        <label *ngIf="pakket.features['minuten']">
+          Minuten:
+          <input type="text" [(ngModel)]="pakket.features['minuten']">
+        </label>
+
+        <label *ngIf="pakket.features['06-nummers']">
+          06-nummers:
+          <input type="checkbox" [checked]="pakket.features['06-nummers']==true?'checked':''">
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="testDiv" *ngIf="product==selected" >
+    <span style="color: black;">Test ngModel:</span><br/>
+    <input style="width: 40px;" type="text" value="{{ selected.pakketten[0].features.snelheid }}"/>
+  </div>
+</div>
